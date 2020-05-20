@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sign_bg"
+    tools:context=".Fragments.TeamFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select player to view more information"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+
+        <Spinner
+            android:id="@+id/team_stats_select_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:background="@color/playerInfoBackground"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/team_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:text="Add new player"
+            android:background="@drawable/login_btn_bg"
+            android:id="@+id/add_player_btn"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

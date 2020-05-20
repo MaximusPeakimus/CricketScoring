@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PlayerInformationActivity"
+    android:background="@drawable/sign_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/display_player_info_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Player Name"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/player_name_information"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Matches Played"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_matches_played"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/display_player_info_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Batting statistics"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Batting average"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_batting_average"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Total runs scored"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_total_runs_scored"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Highscore"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_highscore"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="100s"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_hundreds"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="50s"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_fifties"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="6s"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_sixes"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="4s"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_fours"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Innings batted"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:id="@+id/player_innings_batted"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Not outs"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:id="@+id/player_not_outs"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/display_player_info_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bowlings statistics"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Economy"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_economy"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal"
+                        android:text="Strike rate"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_strike_rate"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal"
+                        android:text="Bowling average"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_bowling_average"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Best bowling"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_best_bowling"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Wickets"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_wickets_taken"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal"
+                        android:text="5 wicket hauls"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_five_wickets"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Overs bowled"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_overs_bowled"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Total runs conceded"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_runs_conceded"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="Wides"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:id="@+id/player_wides"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:text="No balls"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="16sp"
+                        android:id="@+id/player_no_balls"
+                        android:textAlignment="center"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Swipe to go back"
+                android:textColor="#80ffffff"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

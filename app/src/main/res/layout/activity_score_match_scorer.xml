@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sign_bg"
+    tools:context=".ScoreMatchScorer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="BACK"
+            android:id="@+id/game_scoring_back_btn"
+            android:background="@drawable/login_btn_bg"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/display_player_info_bg"
+        android:weightSum="1">
+
+        <GridLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/home_team_name_txt"
+                android:text="Team 1 name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.75"
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/home_team_score_txt"
+                android:layout_columnWeight="0.25"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/home_team_overs_txt"
+                android:layout_columnWeight="0.25"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/away_team_name_txt"
+                android:text="Team 2 name"
+                android:layout_columnWeight="0.75"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/away_team_score_txt"
+                android:layout_columnWeight="0.25"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/away_team_overs_txt"
+                android:layout_columnWeight="0.25"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#979797"/>
+
+        <GridLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="Bowler"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.4"
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_columnWeight="0.2"
+                android:text="Overs"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="Runs"
+                android:layout_columnWeight="0.15"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="Wickets"
+                android:layout_columnWeight="0.25"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/bowler_name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.4"
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/overs_bowled_current"
+                android:layout_columnWeight="0.2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/runs_conceded_current"
+                android:layout_columnWeight="0.15"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/wickets_taken_current"
+                android:layout_columnWeight="0.25"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#979797"/>
+
+        <GridLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="Batsman"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.4"
+                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_columnWeight="0.15"
+                android:text="Runs"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="Balls"
+                android:layout_columnWeight="0.15"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="Fours"
+                android:layout_columnWeight="0.15"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:text="Sixes"
+                android:layout_columnWeight="0.15"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter1_name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.4"
+                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter1_runs"
+                android:layout_columnWeight="0.15"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter1_balls"
+                android:layout_columnWeight="0.15"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter1_fours"
+                android:layout_columnWeight="0.15"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter1_sixes"
+                android:layout_columnWeight="0.15"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter2_name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.4"
+                android:layout_height="30dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter2_runs"
+                android:layout_columnWeight="0.15"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter2_balls"
+                android:layout_columnWeight="0.15"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter2_fours"
+                android:layout_columnWeight="0.15"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/batter2_sixes"
+                android:layout_columnWeight="0.15"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#979797"/>
+
+        <GridLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/dot_ball_btn"
+                android:gravity="center"
+                android:text="."
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.25"
+                android:background="@drawable/score_btn"
+                android:layout_height="70dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/one_run_btn"
+                android:background="@drawable/score_btn"
+                android:gravity="center"
+                android:layout_columnWeight="0.25"
+                android:text="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/two_runs_btn"
+                android:gravity="center"
+                android:background="@drawable/score_btn"
+                android:text="2"
+                android:layout_columnWeight="0.25"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/three_runs_btn"
+                android:gravity="center"
+                android:background="@drawable/score_btn"
+                android:text="3"
+                android:layout_columnWeight="0.25"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/four_runs_btn"
+                android:gravity="center"
+                android:text="4"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.25"
+                android:background="@drawable/score_btn"
+                android:layout_height="70dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/six_runs_btn"
+                android:background="@drawable/score_btn"
+                android:gravity="center"
+                android:layout_columnWeight="0.25"
+                android:text="6"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/wide_ball_btn"
+                android:gravity="center"
+                android:background="@drawable/score_btn"
+                android:text="WD"
+                android:layout_columnWeight="0.25"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/no_ball_btn"
+                android:gravity="center"
+                android:background="@drawable/score_btn"
+                android:text="NB"
+                android:layout_columnWeight="0.25"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+            <Button
+                android:id="@+id/bye_btn"
+                android:gravity="center"
+                android:text="BYE"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.25"
+                android:background="@drawable/score_btn"
+                android:layout_height="70dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/leg_bye_btn"
+                android:background="@drawable/score_btn"
+                android:gravity="center"
+                android:layout_columnWeight="0.25"
+                android:text="LB"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/penalty_runs_btn"
+                android:gravity="center"
+                android:background="@drawable/score_btn"
+                android:text="PEN"
+                android:layout_columnWeight="0.25"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/wicket_taken_btn"
+                android:gravity="center"
+                android:background="@drawable/wicket_btn"
+                android:text="WICKET"
+                android:layout_columnWeight="0.25"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#979797"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#979797"/>
+
+        <GridLayout
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/declare_btn"
+                android:gravity="center"
+                android:text="Declare"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_columnWeight="0.5"
+                android:background="@drawable/score_btn_black"
+                android:textColor="@color/whiteText"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/abandon_match_btn"
+                android:gravity="center"
+                android:background="@drawable/score_btn_black"
+                android:textColor="@color/whiteText"
+                android:text="Abandon Match"
+                android:layout_columnWeight="0.5"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <View
+                android:layout_columnWeight="0.5"
+                android:layout_height="40dp"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+
+            <Button
+                android:id="@+id/finish_match_btn"
+                android:gravity="center"
+                android:enabled="false"
+                android:background="@drawable/score_btn_black"
+                android:textColor="@color/whiteText"
+                android:text="Finish Match"
+                android:layout_columnWeight="0.5"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_gravity="fill"/>
+        </GridLayout>
+
+    </LinearLayout>
+</LinearLayout>

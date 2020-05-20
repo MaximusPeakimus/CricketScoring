@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fixtures"
+        android:title="Fixtures"
+        android:icon="@drawable/ic_event_note_black_24dp"
+        />
+    <item
+        android:id="@+id/results"
+        android:title="Results"
+        android:icon="@drawable/ic_check_black_24dp"
+        />
+    <item
+        android:id="@+id/league_table"
+        android:title="League Table"
+        android:icon="@drawable/ic_grid_on_black_24dp"
+        />
+    <item
+        android:id="@+id/team"
+        android:title="Team"
+        android:icon="@drawable/ic_people_outline_black_24dp"
+        />
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/user"
+        />
+</menu>

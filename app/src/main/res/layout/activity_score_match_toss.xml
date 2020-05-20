@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sign_bg"
+    tools:context=".ScoreMatchToss">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.1"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:text="BACK"
+            android:id="@+id/toss_select_scorer_back_btn"
+            android:background="@drawable/login_btn_bg"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="0.3"
+            android:text="NEXT"
+            android:id="@+id/toss_select_scorer_next_btn"
+            android:background="@drawable/login_btn_bg"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/display_player_info_bg"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toss won by:"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.9">
+
+                    <TextView
+                        android:paddingLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/home_team_toss_txt"
+                        android:gravity="center_vertical"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:paddingLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/away_team_toss_txt"
+                        android:gravity="center_vertical"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/team_select_radio_group">
+
+                    <RadioButton
+                        android:id="@+id/home_team_won_toss_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"/>
+
+                    <RadioButton
+                        android:id="@+id/away_team_won_toss_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/display_player_info_bg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Team chose to:"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="25sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.9">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Bat"
+                        android:paddingLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="Bowl"
+                        android:paddingLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bat_bowl_select_radio_group">
+
+                    <RadioButton
+                        android:id="@+id/team_select_bat_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"/>
+
+                    <RadioButton
+                        android:id="@+id/team_select_bowl_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"/>
+
+
+
+                </RadioGroup>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
